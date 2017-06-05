@@ -40,20 +40,17 @@ public class BowlingTester
 				final JTextArea outputText = new JTextArea(output);
 				outputText.setEditable(false);
 				final JScrollPane scrollBar = new JScrollPane(outputText);
-				scrollBar
-						.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+				scrollBar.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 				ui.add(scrollBar, BorderLayout.CENTER);
 				ui.display();
 			} catch (FileNotFoundException e)
 			{
-				JOptionPane.showMessageDialog(new JPanel(),
-						"Invalid file selected, allowing for manual input.");
+				JOptionPane.showMessageDialog(new JPanel(),"Invalid file selected, allowing for manual input.");
 				createManualInput();
 			}
 		} else
 		{
-			JOptionPane.showMessageDialog(new JPanel(),
-					"No file selected, allowing for manual input.");
+			JOptionPane.showMessageDialog(new JPanel(),"No file selected, allowing for manual input.");
 			createManualInput();
 		}
 		scan.close();
