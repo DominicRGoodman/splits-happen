@@ -51,8 +51,7 @@ public class BowlingGame
 				}
 				neededThrowsPerFrame[i] += frameHits[currentHit + j];
 			}
-			if (neededThrowsPerFrame[i].length() == 2
-					&& neededThrowsPerFrame[i].endsWith("/"))
+			if (neededThrowsPerFrame[i].length() == 2 && neededThrowsPerFrame[i].endsWith("/"))
 			{
 				neededThrowsPerFrame[i] += frameHits[currentHit + 2];
 			}
@@ -64,8 +63,7 @@ public class BowlingGame
 			if (i == 9 && neededThrowsPerFrame[i].length() == 3)
 			{
 				frames[i] = neededThrowsPerFrame[i].substring(0, 3);
-			} else if ((neededThrowsPerFrame[i].charAt(0) == 'x' || neededThrowsPerFrame[i]
-					.charAt(0) == 'X'))
+			} else if ((neededThrowsPerFrame[i].charAt(0) == 'x' || neededThrowsPerFrame[i].charAt(0) == 'X'))
 			{
 				frames[i] = neededThrowsPerFrame[i].charAt(0) + "";
 			} else
@@ -95,8 +93,7 @@ public class BowlingGame
 				{
 					if (nextPoint[i] == '/')
 					{
-						total += (10 - Character
-								.getNumericValue(nextPoint[i - 1]));
+						total += (10 - Character.getNumericValue(nextPoint[i - 1]));
 					} else if (nextPoint[i] == 'x' || nextPoint[i] == 'X')
 					{
 						total += 10;
